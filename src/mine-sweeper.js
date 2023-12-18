@@ -44,7 +44,7 @@ function minesweeper(matrix) {
     for (let j = 0; j < matrix[i].length; j += 1) {
       aroundSquares.forEach(delta => {
         if ((i + delta[0]) >= 0 && (i + delta[0]) < height && (j + delta[1]) >= 0 && (j + delta[1]) < width) {
-          resultMatrix[i][j] += Number(matrix[i + delta[0]][j + delta[1]]);
+          resultMatrix[i][j] += matrix[i + delta[0]][j + delta[1]];
         }
       });
     }
